@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Floating Action Button</title>
+  </head>
+  <body>
+    <div class="action" onclick="actionToggle();">
+      <span>+</span>
+      <ul>
+        <li>
+          <img
+            src="https://img.icons8.com/metro/30/000000/facebook.png"
+            alt=""
+          />Share on Facebook
+        </li>
+        <li>
+          <img
+            src="https://img.icons8.com/android/24/000000/twitter.png"
+            alt=""
+          />Share on Twitter
+        </li>
+        <li>
+          <img
+            src="https://img.icons8.com/windows/30/000000/instagram-new.png"
+            alt=""
+          />Share on Instagram
+        </li>
+        <li>
+          <img
+            src="https://2.bp.blogspot.com/-RLdU_p8LBVY/WXFyfGcwNkI/AAAAAAAHNmo/ZUk-dIn4dNMyX0cRD-m6mocq6Th_ERFRACLcBGAs/s1600/Pinterest-Free-PNG-Image.png"
+            alt=""
+          />Share on Pinterest
+        </li>
+        <li>
+          <img
+            class="linkedin"
+            src="https://image.flaticon.com/icons/png/512/25/25325.png"
+            alt=""
+          />Share on Linkedin
+        </li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+      function actionToggle() {
+        var action = document.querySelector(".action");
+        action.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

@@ -4,49 +4,147 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Floating Action Button</title>
+    <title>Demos Landing Page</title>
   </head>
   <body>
-    <div class="action" onclick="actionToggle();">
-      <span>+</span>
-      <ul>
-        <li>
-          <img
-            src="https://img.icons8.com/metro/30/000000/facebook.png"
-            alt=""
-          />Share on Facebook
-        </li>
-        <li>
-          <img
-            src="https://img.icons8.com/android/24/000000/twitter.png"
-            alt=""
-          />Share on Twitter
-        </li>
-        <li>
-          <img
-            src="https://img.icons8.com/windows/30/000000/instagram-new.png"
-            alt=""
-          />Share on Instagram
-        </li>
-        <li>
-          <img
-            src="https://2.bp.blogspot.com/-RLdU_p8LBVY/WXFyfGcwNkI/AAAAAAAHNmo/ZUk-dIn4dNMyX0cRD-m6mocq6Th_ERFRACLcBGAs/s1600/Pinterest-Free-PNG-Image.png"
-            alt=""
-          />Share on Pinterest
-        </li>
-        <li>
-          <img
-            class="linkedin"
-            src="https://image.flaticon.com/icons/png/512/25/25325.png"
-            alt=""
-          />Share on Linkedin
-        </li>
-      </ul>
+    <div class="text">
+      <h1>Welcome</h1>
+      <h2>I am José Hidalgo</h2>
     </div>
-    <script type="text/javascript">
-      function actionToggle() {
-        var action = document.querySelector(".action");
-        action.classList.toggle("active");
+
+    <div class="container">
+      <div class="slide">
+        <div class="box">
+          <div class="detail">
+            <h2>Design</h2>
+            <p>Hello Everyone</p>
+          </div>
+          <img src="images/img1.jpg" alt="" />
+        </div>
+
+        <div class="box">
+          <div class="detail">
+            <h2>Design</h2>
+            <p>Hello Everyone</p>
+          </div>
+          <img src="images/img2.jpg" alt="" />
+        </div>
+
+        <div class="box">
+          <div class="detail">
+            <h2>Design</h2>
+            <p>Hello Everyone</p>
+          </div>
+          <img src="images/img3.jpg" alt="" />
+        </div>
+
+        <div class="box">
+          <div class="detail">
+            <h2>Design</h2>
+            <p>Hello Everyone</p>
+          </div>
+          <img src="images/img4.jpg" alt="" />
+        </div>
+
+        <div class="box">
+          <div class="detail">
+            <h2>Design</h2>
+            <p>Hello Everyone</p>
+          </div>
+          <img src="images/img5.jpg" alt="" />
+        </div>
+
+        <div class="box">
+          <div class="detail">
+            <h2>Design</h2>
+            <p>Hello Everyone</p>
+          </div>
+          <img src="images/img6.jpg" alt="" />
+        </div>
+
+        <div class="box">
+          <div class="detail">
+            <h2>Design</h2>
+            <p>Hello Everyone</p>
+          </div>
+          <img src="images/img7.jpg" alt="" />
+        </div>
+
+        <div class="box">
+          <div class="detail">
+            <h2>Design</h2>
+            <p>Hello Everyone</p>
+          </div>
+          <img src="images/img8.jpg" alt="" />
+        </div>
+
+        <div class="box">
+          <div class="detail">
+            <h2>Design</h2>
+            <p>Hello Everyone</p>
+          </div>
+          <img src="images/img9.jpg" alt="" />
+        </div>
+
+        <div class="box">
+          <div class="detail">
+            <h2>Design</h2>
+            <p>Hello Everyone</p>
+          </div>
+          <img src="images/img10.jpg" alt="" />
+        </div>
+
+        <div class="box">
+          <div class="detail">
+            <h2>Design</h2>
+            <p>Hello Everyone</p>
+          </div>
+          <img src="images/img11.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const container = document.querySelector(".container");
+      const slide = document.querySelector(".slide");
+      const box = document.querySelectorAll(".box");
+      let width = box[0].offsetWidth + 30;
+      slide.style.minWidth = `${box.length * width}px`;
+
+      let start;
+      let change;
+
+      container.addEventListener("dragstart", (e) => {
+        start = e.clientX;
+      });
+
+      container.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        let touch = e.clientX;
+        change = start - touch;
+      });
+
+      container.addEventListener("dragend", slideShow);
+
+      // Touch events on mobile
+      container.addEventListener("touchstart", (e) => {
+        start = e.touches[0].clientX;
+      });
+
+      container.addEventListener("touchmove", (e) => {
+        e.preventDefault();
+        let touch = e.touches[0];
+        change = start - touch.clientX;
+      });
+
+      container.addEventListener("touchend", slideShow);
+
+      function slideShow() {
+        if (change > 0) {
+          container.scrollLeft += width;
+        } else {
+          container.scrollLeft -= width;
+        }
       }
     </script>
   </body>
