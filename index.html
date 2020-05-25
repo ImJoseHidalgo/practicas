@@ -4,148 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Demos Landing Page</title>
+    <title>Landing Platzi</title>
   </head>
   <body>
-    <div class="text">
-      <h1>Welcome</h1>
-      <h2>I am José Hidalgo</h2>
-    </div>
-
-    <div class="container">
-      <div class="slide">
-        <div class="box">
-          <div class="detail">
-            <h2>Design</h2>
-            <p>Hello Everyone</p>
-          </div>
-          <img src="images/img1.jpg" alt="" />
+    <header>
+      <a href="#" class="logo">Platzi</a>
+      <div class="menu">
+        <ul>
+          <a href="#">Blog</a>
+        </ul>
+        <ul>
+          <a href="#">Agenda</a>
+        </ul>
+        <ul>
+          <a href="#">Clases</a>
+        </ul>
+        <ul>
+          <button>Iniciar Sesion</button>
+        </ul>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Buscar" />
+        <img src="images/pngocean.com.png" width="20px" alt="" />
+      </div>
+    </header>
+    <div class="hero">
+      <div class="hero-container">
+        <div class="badge">
+          <img src="images/badge.png" alt="" />
         </div>
-
-        <div class="box">
-          <div class="detail">
-            <h2>Design</h2>
-            <p>Hello Everyone</p>
-          </div>
-          <img src="images/img2.jpg" alt="" />
+        <h1 class="title">Curso de React.js</h1>
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            cumque modi, voluptate fugiat eligendi, quia neque illum in labore
+            quaerat assumenda consequatur sed ab eveniet quam fuga sit culpa!
+            Voluptatem.
+          </p>
         </div>
-
-        <div class="box">
-          <div class="detail">
-            <h2>Design</h2>
-            <p>Hello Everyone</p>
-          </div>
-          <img src="images/img3.jpg" alt="" />
-        </div>
-
-        <div class="box">
-          <div class="detail">
-            <h2>Design</h2>
-            <p>Hello Everyone</p>
-          </div>
-          <img src="images/img4.jpg" alt="" />
-        </div>
-
-        <div class="box">
-          <div class="detail">
-            <h2>Design</h2>
-            <p>Hello Everyone</p>
-          </div>
-          <img src="images/img5.jpg" alt="" />
-        </div>
-
-        <div class="box">
-          <div class="detail">
-            <h2>Design</h2>
-            <p>Hello Everyone</p>
-          </div>
-          <img src="images/img6.jpg" alt="" />
-        </div>
-
-        <div class="box">
-          <div class="detail">
-            <h2>Design</h2>
-            <p>Hello Everyone</p>
-          </div>
-          <img src="images/img7.jpg" alt="" />
-        </div>
-
-        <div class="box">
-          <div class="detail">
-            <h2>Design</h2>
-            <p>Hello Everyone</p>
-          </div>
-          <img src="images/img8.jpg" alt="" />
-        </div>
-
-        <div class="box">
-          <div class="detail">
-            <h2>Design</h2>
-            <p>Hello Everyone</p>
-          </div>
-          <img src="images/img9.jpg" alt="" />
-        </div>
-
-        <div class="box">
-          <div class="detail">
-            <h2>Design</h2>
-            <p>Hello Everyone</p>
-          </div>
-          <img src="images/img10.jpg" alt="" />
-        </div>
-
-        <div class="box">
-          <div class="detail">
-            <h2>Design</h2>
-            <p>Hello Everyone</p>
-          </div>
-          <img src="images/img11.jpg" alt="" />
+        <form action="" class="form">
+          <p>Registrate a Platzi</p>
+          <input type="text" placeholder="Nombre" />
+          <input type="email" placeholder="Correo Electronico" />
+          <button type="submit">Comienza ahora</button>
+        </form>
+        <div class="countdown">
+          <p>Lanzamiento:</p>
+          <p>
+            <span>01d</span>
+            <span>03h</span>
+            <span>09m</span>
+            <span>05s</span>
+          </p>
         </div>
       </div>
     </div>
-
-    <script>
-      const container = document.querySelector(".container");
-      const slide = document.querySelector(".slide");
-      const box = document.querySelectorAll(".box");
-      let width = box[0].offsetWidth + 30;
-      slide.style.minWidth = `${box.length * width}px`;
-
-      let start;
-      let change;
-
-      container.addEventListener("dragstart", (e) => {
-        start = e.clientX;
-      });
-
-      container.addEventListener("dragover", (e) => {
-        e.preventDefault();
-        let touch = e.clientX;
-        change = start - touch;
-      });
-
-      container.addEventListener("dragend", slideShow);
-
-      // Touch events on mobile
-      container.addEventListener("touchstart", (e) => {
-        start = e.touches[0].clientX;
-      });
-
-      container.addEventListener("touchmove", (e) => {
-        e.preventDefault();
-        let touch = e.touches[0];
-        change = start - touch.clientX;
-      });
-
-      container.addEventListener("touchend", slideShow);
-
-      function slideShow() {
-        if (change > 0) {
-          container.scrollLeft += width;
-        } else {
-          container.scrollLeft -= width;
-        }
-      }
-    </script>
   </body>
 </html>
