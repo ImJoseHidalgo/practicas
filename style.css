@@ -218,4 +218,12 @@ p {
       "form form"
       "countdown countdown";
   }
+
+  .description {
+    padding: 0 0 10px 0;
+  }
+
+  .countdown {
+    padding: 10px 0 0 0;
+  }
 }
