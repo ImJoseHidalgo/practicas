@@ -154,6 +154,11 @@ header {
   display: inline-block;
 }
 
+.form button:active {
+  transform: scale(0.95);
+  border-bottom: 5px solid transparent;
+}
+
 .countdown {
   grid-area: countdown;
 }

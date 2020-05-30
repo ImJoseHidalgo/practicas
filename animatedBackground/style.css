@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  background-image: url(https://sciencewarsdotcom.files.wordpress.com/2018/04/whatsapp-image-2018-04-04-at-8-21-42-pm.jpeg?w=1280&h=768&crop=1);
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  font-family: Poppins;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, 50%);
+  z-index: 1;
+}
+
+.content h2 {
+  color: white;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.content p {
+  color: white;
+  font-size: 20px;
+}
+
+.box {
+  position: absolute;
+  top: 85%;
+  left: 52%;
+  width: 10px;
+  height: 10px;
+  border: 1px solid crimson;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: animate 12s ease-in forwards infinite;
+}
+
+.box:nth-child(2) {
+  left: 12%;
+  top: 14%;
+  animation-delay: 2s;
+}
+
+.box:nth-child(3) {
+  left: 85%;
+  top: 65%;
+  animation-delay: 4s;
+  border-color: white;
+}
+
+.box:nth-child(4) {
+  left: 73%;
+  top: 10%;
+  animation-delay: 6s;
+}
+
+.box:nth-child(5) {
+  left: 10%;
+  top: 85%;
+  animation-delay: 8s;
+  border-color: white;
+}
+
+.box:nth-child(6) {
+  left: 50%;
+  top: 10%;
+  animation-delay: 10s;
+  border-color: white;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
