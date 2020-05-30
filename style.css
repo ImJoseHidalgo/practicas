@@ -191,6 +191,26 @@ p {
   grid-area: description;
 }
 
+footer {
+  background: #23475b;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 1px solid #203844;
+}
+
+.footer ul {
+  padding: 0;
+}
+
+.footer ul a {
+  text-transform: uppercase;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
+
 @media screen and (max-width: 768px) {
   header {
     grid-template-columns: 70px 1fr;
@@ -213,6 +233,10 @@ p {
 
   .search {
     display: none;
+  }
+
+  .hero {
+    height: 80vh;
   }
 
   .hero-container {
