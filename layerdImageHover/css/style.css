@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  position: relative;
+  /* width: 700px;
+  height: 461px; */
+  width: 896px;
+  height: 754px;
+}
+
+.box .screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.box:hover .screen.screen5 {
+  transform: translateY(-160px);
+  opacity: 1;
+}
+
+.box:hover .screen.screen4 {
+  transform: translateY(-120px);
+  opacity: 0.8;
+}
+
+.box:hover .screen.screen3 {
+  transform: translateY(-80px);
+  opacity: 0.6;
+}
+
+.box:hover .screen.screen2 {
+  transform: translateY(-40px);
+  opacity: 0.4;
+}
+
+.box:hover .screen.screen1 {
+  transform: translateY(0px);
+  opacity: 0.2;
+}
+
+@media only screen and (max-width: 600px) {
+  .box {
+    position: relative;
+    width: 450px;
+    height: 400px;
+  }
+
+  .box img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .box:hover .screen.screen5 {
+    transform: translateY(-80px);
+    opacity: 1;
+  }
+
+  .box:hover .screen.screen4 {
+    transform: translateY(-60px);
+    opacity: 0.8;
+  }
+
+  .box:hover .screen.screen3 {
+    transform: translateY(-40px);
+    opacity: 0.6;
+  }
+
+  .box:hover .screen.screen2 {
+    transform: translateY(-20px);
+    opacity: 0.4;
+  }
+
+  .box:hover .screen.screen1 {
+    transform: translateY(0px);
+    opacity: 0.2;
+  }
+}
