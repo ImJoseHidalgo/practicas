@@ -53,3 +53,37 @@ section h2 {
   font-size: 3em;
   color: #fff;
 }
+
+@media only screen and (max-width: 600px) {
+  section h2 {
+    font-size: 2em;
+  }
+
+  .box {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    padding: 25px;
+  }
+
+  .box h2 {
+    font-size: 2em;
+  }
+
+  .box .logo {
+    max-width: 200px;
+  }
+
+  .box2 {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    padding: 25px;
+    background: #000;
+  }
+
+  .box2 h2 {
+    font-size: 2em;
+    color: #fff;
+  }
+}
