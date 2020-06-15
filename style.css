@@ -206,6 +206,11 @@ p {
   margin: 0;
 }
 
+.dea a {
+  color: greenyellow;
+  font-size: 20px;
+}
+
 footer {
   background: #23475b;
   height: 50px;
