@@ -191,6 +191,21 @@ p {
   grid-area: description;
 }
 
+.dea {
+  background: #23475b;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dea h2 {
+  color: lightgray;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 footer {
   background: #23475b;
   height: 50px;
@@ -254,5 +269,9 @@ footer {
 
   .countdown {
     padding: 10px 0 0 0;
+  }
+
+  .dea {
+    display: none;
   }
 }
