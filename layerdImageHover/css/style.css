@@ -11,8 +11,13 @@ body {
   position: relative;
   /* width: 700px;
   height: 461px; */
-  width: 896px;
-  height: 754px;
+  width: 900px;
+  height: 506px;
+}
+
+.box img {
+  width: 900px;
+  height: 506px;
 }
 
 .box .screen {
@@ -23,22 +28,22 @@ body {
 }
 
 .box:hover .screen.screen5 {
-  transform: translateY(-160px);
+  transform: translateY(-80px);
   opacity: 1;
 }
 
 .box:hover .screen.screen4 {
-  transform: translateY(-120px);
+  transform: translateY(-60px);
   opacity: 0.8;
 }
 
 .box:hover .screen.screen3 {
-  transform: translateY(-80px);
+  transform: translateY(-40px);
   opacity: 0.6;
 }
 
 .box:hover .screen.screen2 {
-  transform: translateY(-40px);
+  transform: translateY(-20px);
   opacity: 0.4;
 }
 
@@ -50,32 +55,32 @@ body {
 @media only screen and (max-width: 600px) {
   .box {
     position: relative;
-    width: 450px;
-    height: 400px;
+    width: 375px;
+    height: 300px;
   }
 
   .box img {
-    width: 400px;
-    height: 400px;
+    width: 375px;
+    height: 300px;
   }
 
   .box:hover .screen.screen5 {
-    transform: translateY(-80px);
+    transform: translateY(-40px);
     opacity: 1;
   }
 
   .box:hover .screen.screen4 {
-    transform: translateY(-60px);
+    transform: translateY(-30px);
     opacity: 0.8;
   }
 
   .box:hover .screen.screen3 {
-    transform: translateY(-40px);
+    transform: translateY(-20px);
     opacity: 0.6;
   }
 
   .box:hover .screen.screen2 {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
     opacity: 0.4;
   }
 
