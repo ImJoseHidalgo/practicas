@@ -193,7 +193,8 @@ p {
 
 .dea {
   background: #23475b;
-  height: 60vh;
+  height: 100%;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,7 +257,7 @@ footer {
   }
 
   .hero {
-    height: 80vh;
+    height: 100%;
   }
 
   .hero-container {
@@ -276,7 +277,4 @@ footer {
     padding: 10px 0 0 0;
   }
 
-  .dea {
-    height: 50vh;
-  }
 }
