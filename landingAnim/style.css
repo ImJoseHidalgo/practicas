@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background: #000;
+}
+a {
+  position: relative;
+  width: 180px;
+  height: 60px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 60px;
+  letter-spacing: 2px;
+  margin: 20px;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+a:hover {
+  background: crimson url(images/pixel.png);
+  background-size: 180px;
+  transition-delay: 0.8s;
+  animation: animate 0.8s steps(8) forwards;
+}
+a:hover:nth-child(2) {
+  background: crimson url(images/pixel2.png);
+  background-size: 180px;
+  transition-delay: 0.8s;
+  animation: animate 0.8s steps(8) forwards;
+}
+@keyframes animate {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -480px;
+  }
+}
