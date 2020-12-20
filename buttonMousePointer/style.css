@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  background: #111;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  position: relative;
+  padding: 1rem 3rem;
+  border: .2rem solid #41f321;
+  margin: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  color: #41f321;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  overflow: hidden;
+  transition: .5s;
+}
+.btn:hover {
+  color: #111;
+}
+.btn span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #41f321;
+  z-index: -1;
+  transition: width .5s, height .5s;
+}
+.btn:hover span {
+  width: 30rem;
+  height: 30rem;
+}
